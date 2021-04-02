@@ -1,4 +1,5 @@
 import React from 'react'
+import {lotrApiKey} from './config'
 
 function App() {
   return (
