@@ -22,13 +22,15 @@ body {
 }
 
 nav {
+  padding-top: 20px;
+  font-family: 'DellaRespira';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -38,7 +40,6 @@ nav {
 }
 
 nav ul {
-  font-family: 'DellaRespira';
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,11 +56,14 @@ nav ul {
           justify-content: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-top: 20px;
   list-style: none;
 }
 
 nav ul li {
   padding: 2vw;
+}
+
+h1 {
+  font-size: 1.7rem;
 }
 /*# sourceMappingURL=index.css.map */

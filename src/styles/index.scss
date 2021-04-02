@@ -24,16 +24,20 @@ body {
 }
 //MOBILE FIRST SCSS
 nav {
-    @include flexCenter(row);
+    padding-top: 20px;
+    font-family: 'DellaRespira';
+    @include flexCenter(column);
     ul{
-        font-family: 'DellaRespira';
         width: 80%;
         @include flexCenter(row);
         justify-content: space-around;
-        padding-top: 20px;
+        
         list-style: none;
         li {
             padding: 2vw;
         }
     }
+}
+h1 {
+    font-size: 1.7rem;
 }
