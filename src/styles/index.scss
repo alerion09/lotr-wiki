@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+$primary-color: black;
 html {
     font-size: 62.5%;
 }
@@ -40,4 +41,10 @@ nav {
 }
 h1 {
     font-size: 1.7rem;
+}
+.link {
+    text-decoration: none;
+    &:visited {
+        color: $primary-color;
+    }
 }

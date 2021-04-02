@@ -66,4 +66,12 @@ nav ul li {
 h1 {
   font-size: 1.7rem;
 }
+
+.link {
+  text-decoration: none;
+}
+
+.link:visited {
+  color: black;
+}
 /*# sourceMappingURL=index.css.map */
