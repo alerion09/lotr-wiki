@@ -1,11 +1,11 @@
 import React from 'react'
 import {lotrApiKey} from './config'
-
+import Navigation from './Navigation'
 function App() {
   return (
-    <div>
-      App
-    </div>
+    <>
+      <Navigation />
+    </>
   );
 }
 
