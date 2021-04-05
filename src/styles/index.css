@@ -5,6 +5,11 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'DellaRespira';
+  src: url(./../fonts/DellaRespira-Regular.ttf);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -12,13 +17,8 @@ html {
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.6rem;
-}
-
-@font-face {
   font-family: 'DellaRespira';
-  src: url(./../fonts/DellaRespira-Regular.ttf);
+  font-size: 1.6rem;
 }
 
 nav {
@@ -73,5 +73,54 @@ h1 {
 
 .link:visited {
   color: black;
+}
+
+.loading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+.books-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+.books-container li {
+  list-style: none;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.li-icon {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=index.css.map */

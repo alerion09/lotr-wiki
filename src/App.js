@@ -1,15 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {lotrApiKey} from './config';
 
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Books from './Books';
 import Movies from './Movies';
 import Characters from './Characters';
 import HomePage from './HomePage';
 import Navigation from './Navigation';
 
+const apiPrefix = 'https://the-one-api.dev/v2/';
+
+
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [dataState, setDataState] = useState();
+
+  const getData = async (prefix, data) => {
+    const response = await fetch (`${prefix}${data}`);
+    const jsonData = await response.json();
+    setDataState(jsonData);
+    setIsLoading(false);
+  }
+
+
   return (
     <Router>
       <Navigation />
@@ -18,7 +33,7 @@ function App() {
               <HomePage />
           </Route>
           <Route path='/books'>
-              <Books />
+              <Books isLoading={isLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
           </Route>
           <Route path='/movies'>
               <Movies />
