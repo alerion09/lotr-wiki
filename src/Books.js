@@ -2,10 +2,11 @@ import React, {useEffect} from 'react';
 import Book from './Book';
 import Loading from './Loading';
 
-const Books = ({isLoading, apiPrefix, getData, dataState}) => {
+const Books = ({isLoading, setIsLoading, apiPrefix, getData, dataState}) => {
     
 
     useEffect(() => {
+        setIsLoading(true);
         getData(apiPrefix,'book');
       },[]);
     
@@ -16,14 +17,12 @@ const Books = ({isLoading, apiPrefix, getData, dataState}) => {
     }
     else {
         return (
-            <div className='books-container'>
-                <ul>
+            <div className='items-container'>
                     {dataState.docs.map((item) => {
                         return (
                             <Book key={item._id} name={item.name}/>
                         )
                     })}
-                </ul>
             </div>
         );
     }

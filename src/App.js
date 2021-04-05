@@ -18,7 +18,9 @@ function App() {
   const [dataState, setDataState] = useState();
 
   const getData = async (prefix, data) => {
-    const response = await fetch (`${prefix}${data}`);
+    const response = await fetch (`${prefix}${data}`, {
+      headers: {"Authorization": `Bearer ${lotrApiKey}`}
+    });
     const jsonData = await response.json();
     setDataState(jsonData);
     setIsLoading(false);
@@ -28,20 +30,23 @@ function App() {
   return (
     <Router>
       <Navigation />
-      <Switch>
+      <div className='content-container'>
+        <Switch>
           <Route exact path='/'>
               <HomePage />
           </Route>
           <Route path='/books'>
-              <Books isLoading={isLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
+              <Books isLoading={isLoading} setIsLoading= {setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
           </Route>
           <Route path='/movies'>
-              <Movies />
+              <Movies isLoading={isLoading} setIsLoading= {setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState}/>
           </Route>
           <Route path='/characters'>
               <Characters />
           </Route>
         </Switch>
+      </div>
+      
     </Router>
   );
 }

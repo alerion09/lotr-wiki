@@ -5,7 +5,7 @@
 }
 $primary-color: black;
 $default-space: 20px;
-
+$primary-font: 'DellaRespira';
 @font-face {
     font-family: 'DellaRespira';
     src: url(./../fonts/DellaRespira-Regular.ttf);
@@ -50,19 +50,21 @@ h1 {
         color: $primary-color;
     }
 }
+.content-container {
+    @include flexCenter(row);
+}
 .loading-container {
     @include flexCenter(column);
     padding-top: $default-space;
 }
-.books-container {
+.items-container {
     @include flexCenter(column);
+    align-items: flex-start;
     padding-top: $default-space;
-    li {
-        list-style: none;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-    }
+    width: 80%;
+}
+.item {
+    margin-bottom: $default-space;
 }
 .li-icon {
     margin-right: 10px;
