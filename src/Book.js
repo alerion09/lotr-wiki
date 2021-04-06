@@ -1,11 +1,9 @@
 import React from 'react';
-import {FaRing} from 'react-icons/fa'
 const Book = ({name}) => {
     return (
-        <div className='item'>
-            <FaRing className='li-icon' />
+        <button className='item'>
            {name}
-        </div>
+        </button>
     );
 }
 

@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  background-color: rgba(225, 222, 212, 0.603);
   width: 100%;
   height: 100%;
   font-family: 'DellaRespira';
@@ -22,6 +23,7 @@ body {
 }
 
 nav {
+  background-color: #453226;
   padding-top: 20px;
   font-family: 'DellaRespira';
   display: -webkit-box;
@@ -65,6 +67,7 @@ nav ul li {
 
 h1 {
   font-size: 1.7rem;
+  color: #cdb57e;
 }
 
 .link {
@@ -72,7 +75,7 @@ h1 {
 }
 
 .link:visited {
-  color: black;
+  color: #cdb57e;
 }
 
 .content-container {
@@ -125,12 +128,22 @@ h1 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-top: 20px;
-  width: 80%;
+  padding-top: 40px;
 }
 
 .item {
   margin-bottom: 20px;
+  padding: 15px;
+  width: 100%;
+  color: #cdb57e;
+  background-color: #453226;
+  border-radius: 5px 20px 5px 20px;
+  -webkit-box-shadow: 5px 5px 5px #c4b7b7;
+          box-shadow: 5px 5px 5px #c4b7b7;
+  border: none;
+  font-family: "DellaRespira";
+  font-size: 1.5rem;
+  outline: none;
 }
 
 .li-icon {

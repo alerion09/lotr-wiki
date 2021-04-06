@@ -36,10 +36,10 @@ function App() {
               <HomePage />
           </Route>
           <Route path='/books'>
-              <Books isLoading={isLoading} setIsLoading= {setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
+              <Books isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
           </Route>
           <Route path='/movies'>
-              <Movies isLoading={isLoading} setIsLoading= {setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState}/>
+              <Movies isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState}/>
           </Route>
           <Route path='/characters'>
               <Characters />
