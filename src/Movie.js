@@ -1,11 +1,9 @@
 import React from 'react';
 const Movie = ({name}) => {
     return (
-        <button className='item'>
-            <div>
+        <div className='item'>
                 {name}
-            </div>
-        </button>
+        </div>
     );
 }
 

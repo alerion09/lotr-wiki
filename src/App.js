@@ -39,7 +39,7 @@ function App() {
           <Route path='/books'>
               <Books isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
           </Route>
-          <Route exact path='/chapters/:id' children={<Chapters />}>
+          <Route exact path='/chapters/:id' children={<Chapters isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState}/>}>
           </Route>
           <Route path='/movies'>
               <Movies isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState}/>

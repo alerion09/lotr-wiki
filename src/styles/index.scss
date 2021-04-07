@@ -28,6 +28,7 @@ body {
     height: 100%;
     font-family: 'DellaRespira';
     font-size: 1.6rem;
+    color: $secondary-color;
 }
 #root {
     width: 100%;
@@ -42,7 +43,6 @@ nav {
         width: 80%;
         @include flexCenter(row);
         justify-content: space-around;
-        
         list-style: none;
         li {
             padding: 2vw;
@@ -50,12 +50,16 @@ nav {
     }
 }
 h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: $primary-color;
+}
+h2 {
+    font-size: 1.7rem;
+    color: $secondary-color;
 }
 .link {
     text-decoration: none;
-    &:visited {
+    &:visited, &:active, &:link, &:hover {
         color: $primary-color;
     }
 }
@@ -71,7 +75,7 @@ h1 {
 .items-container {
     @include flexCenter(column);
     align-items: flex-start;
-    padding-top: 40px;
+    margin-top: $default-space*3;
 }
 .item {
     margin-bottom: $default-space;
@@ -81,13 +85,8 @@ h1 {
     background-color: $secondary-color;
     border-radius: 5px 20px 5px 20px;
     box-shadow: 5px 5px 10px rgb(196, 183, 183);
-    border: none;
     font-family: $primary-font;
     font-size: 1.5rem;
-    outline: none;
-}
-.li-icon {
-    margin-right: 10px;
 }
 @keyframes spin {
     0% {
@@ -117,4 +116,28 @@ h1 {
     top: 50%;
     left: 50%;
     margin: -32px 0 0 -32px;
+}
+.chapters-container {
+    @include flexCenter(column);
+    margin-top: $default-space*2;
+    width:100%;
+    &-header {
+        @include flexCenter(column);
+        margin-bottom: $default-space;
+        h2 {
+            margin-bottom: $default-space;
+        }
+    }
+    &-chapters {
+        @include flexCenter(column);
+        justify-content: space-around;
+    }
+    ul {
+        width:100%;
+        list-style-type: decimal;
+    }
+    li {
+        padding: 0 0 5px 10px;
+    }
+    
 }
