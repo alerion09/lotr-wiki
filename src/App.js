@@ -7,6 +7,7 @@ import Movies from './Movies';
 import Characters from './Characters';
 import HomePage from './HomePage';
 import Navigation from './Navigation';
+import Chapters from './Chapters';
 
 const apiPrefix = 'https://the-one-api.dev/v2/';
 
@@ -38,12 +39,15 @@ function App() {
           <Route path='/books'>
               <Books isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
           </Route>
+          <Route exact path='/chapters/:id' children={<Chapters />}>
+          </Route>
           <Route path='/movies'>
               <Movies isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState}/>
           </Route>
           <Route path='/characters'>
               <Characters />
           </Route>
+          
         </Switch>
       </div>
       

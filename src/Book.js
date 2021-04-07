@@ -1,9 +1,13 @@
 import React from 'react';
-const Book = ({name}) => {
+import {Link} from 'react-router-dom';
+const Book = ({name, id}) => {
     return (
-        <button className='item'>
-           {name}
-        </button>
+        <Link to={`/chapters/${id}`}>
+            <button className='item'>
+                {name}
+            </button>
+        </Link>
+        
     );
 }
 

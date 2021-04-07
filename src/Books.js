@@ -20,7 +20,7 @@ const Books = ({isLoading, setIsLoading, apiPrefix, getData, dataState}) => {
             <div className='items-container'>
                     {dataState.docs.map((item) => {
                         return (
-                            <Book key={item._id} name={item.name}/>
+                            <Book key={item._id} id={item._id} name={item.name}/>
                         )
                     })}
             </div>

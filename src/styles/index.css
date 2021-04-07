@@ -139,8 +139,8 @@ h1 {
   color: #cdb57e;
   background-color: #453226;
   border-radius: 5px 20px 5px 20px;
-  -webkit-box-shadow: 5px 5px 5px #c4b7b7;
-          box-shadow: 5px 5px 5px #c4b7b7;
+  -webkit-box-shadow: 5px 5px 10px #c4b7b7;
+          box-shadow: 5px 5px 10px #c4b7b7;
   border: none;
   font-family: "DellaRespira";
   font-size: 1.5rem;
