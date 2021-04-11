@@ -4,7 +4,6 @@ import Loading from './Loading';
 
 const Books = ({isLoading, setIsLoading, apiPrefix, getData, dataState}) => {
     
-
     useEffect(() => {
         setIsLoading(true);
         getData(apiPrefix,'book');
@@ -25,8 +24,6 @@ const Books = ({isLoading, setIsLoading, apiPrefix, getData, dataState}) => {
                     })}
             </div>
         );
-    }
-    
-}
-
+    };
+};
 export default Books;

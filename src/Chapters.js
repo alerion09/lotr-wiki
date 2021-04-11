@@ -38,7 +38,7 @@ const Chapters = ({isLoading, setIsLoading, apiPrefix, getData, dataState}) => {
                 </div> 
             </div>
         );
-    }
-}
+    };
+};
 
 export default Chapters;

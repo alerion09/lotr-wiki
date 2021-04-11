@@ -5,6 +5,6 @@ const Movie = ({name}) => {
                 {name}
         </div>
     );
-}
+};
 
 export default Movie;

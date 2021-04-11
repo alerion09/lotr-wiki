@@ -23,8 +23,7 @@ function App() {
     const jsonData = await response.json();
     setDataState(jsonData);
     setIsLoading(false);
-  }
-
+  };
 
   return (
     <Router>
@@ -45,11 +44,10 @@ function App() {
           <Route path='/characters'>
               <Characters />
           </Route>
-          
         </Switch>
       </div>
     </Router>
   );
-}
+};
 
 export default App;

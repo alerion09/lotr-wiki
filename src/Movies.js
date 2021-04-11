@@ -24,7 +24,7 @@ const Movies = ({isLoading, setIsLoading, apiPrefix, getData, dataState}) => {
                     {console.log(dataState)}
             </div>
         );
-    }
-}
+    };
+};
 
 export default Movies;

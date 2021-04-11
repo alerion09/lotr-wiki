@@ -7,6 +7,6 @@ const Book = ({name, id}) => {
         </Link>
         
     );
-}
+};
 
 export default Book;
