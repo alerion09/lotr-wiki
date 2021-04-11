@@ -11,8 +11,6 @@ import Chapters from './Chapters';
 
 const apiPrefix = 'https://the-one-api.dev/v2/';
 
-
-
 function App() {
 
   const [isLoading, setIsLoading] = useState(true);
@@ -50,7 +48,6 @@ function App() {
           
         </Switch>
       </div>
-      
     </Router>
   );
 }
