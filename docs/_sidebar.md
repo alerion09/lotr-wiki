@@ -1,0 +1,6 @@
+* [Home](/#lord-of-the-rings-wiki)
+* [About](/#about)
+* [What is offer](/#what-is-offer)
+* [Books](/#books)
+* [Movies](/#movies)
+* [Characters](/#characters)
