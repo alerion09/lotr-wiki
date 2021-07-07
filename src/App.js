@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
-import {lotrApiKey} from './config';
-
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import React, { useState } from 'react';
+import { lotrApiKey } from './config';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Books from './Books';
 import Movies from './Movies';
 import Characters from './Characters';
@@ -11,14 +10,13 @@ import Chapters from './Chapters';
 
 const apiPrefix = 'https://the-one-api.dev/v2/';
 
-function App() {
-
+const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [dataState, setDataState] = useState();
 
   const getData = async (prefix, data) => {
-    const response = await fetch (`${prefix}${data}`, {
-      headers: {"Authorization": `Bearer ${lotrApiKey}`}
+    const response = await fetch(`${prefix}${data}`, {
+      headers: { "Authorization": `Bearer ${lotrApiKey}` }
     });
     const jsonData = await response.json();
     setDataState(jsonData);
@@ -31,18 +29,19 @@ function App() {
       <div className='content-container'>
         <Switch>
           <Route exact path='/'>
-              <HomePage />
+            <HomePage />
           </Route>
           <Route path='/books'>
-              <Books isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
+            <Books isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
           </Route>
-          <Route exact path='/chapters/:id' children={<Chapters isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState}/>}>
+          <Route exact path='/chapters/:id'>
+            <Chapters isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
           </Route>
           <Route path='/movies'>
-              <Movies isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState}/>
+            <Movies isLoading={isLoading} setIsLoading={setIsLoading} apiPrefix={apiPrefix} getData={getData} dataState={dataState} />
           </Route>
           <Route path='/characters'>
-              <Characters />
+            <Characters />
           </Route>
         </Switch>
       </div>

@@ -1,30 +1,30 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Loading from './Loading';
 import Movie from './Movie';
 
-const Movies = ({isLoading, setIsLoading, apiPrefix, getData, dataState}) => {
-    
-    useEffect(() => {
-        setIsLoading(true);
-        getData(apiPrefix,'movie');
-      },[]);
+const Movies = ({ isLoading, setIsLoading, apiPrefix, getData, dataState }) => {
 
-    if (isLoading) {
-        return (
-            <Loading />
-        )
-    } else {
-        return (
-            <div className='items-container'>
-                    {dataState.docs.map((item) => {
-                        return (
-                            <Movie key={item._id} name={item.name}/>
-                        );
-                    })}
-                    {console.log(dataState)}
-            </div>
-        );
-    };
+  useEffect(() => {
+    setIsLoading(true);
+    getData(apiPrefix, 'movie');
+  }, []);
+
+  if (isLoading) {
+    return (
+      <Loading />
+    );
+  } else {
+    return (
+      <div className='items-container'>
+        {dataState.docs.map((item) => {
+          return (
+            <Movie key={item._id} name={item.name} />
+          );
+        })}
+        {console.log(dataState)}
+      </div>
+    );
+  }
 };
 
 export default Movies;
