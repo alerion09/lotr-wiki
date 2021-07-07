@@ -1,143 +1,176 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 $primary-color: rgb(205, 181, 126);
-$secondary-color: rgb(69,50,38);
+$secondary-color: rgb(69, 50, 38);
 $background-color: rgba(225, 222, 212, 0.603);
 $default-space: 20px;
 $primary-font: 'DellaRespira';
+
 @font-face {
-    font-family: 'DellaRespira';
-    src: url(./../fonts/DellaRespira-Regular.ttf);
+  font-family: 'DellaRespira';
+  src: url(./../fonts/DellaRespira-Regular.ttf);
 }
+
 @mixin flexCenter ($direction) {
-    display: flex;
-    flex-direction: $direction;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
 }
+
 //MOBILE FIRST SCSS
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
+
 body {
-    background-color: $background-color;
-    width: 100%;
-    height: 100%;
-    font-family: 'DellaRespira';
-    font-size: 1.6rem;
-    color: $secondary-color;
+  background-color: $background-color;
+  width: 100%;
+  height: 100%;
+  font-family: 'DellaRespira';
+  font-size: 1.6rem;
+  color: $secondary-color;
 }
+
 #root {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
+
 nav {
-    background-color: $secondary-color;
-    padding-top: $default-space;
-    font-family: 'DellaRespira';
-    @include flexCenter(column);
-    ul{
-        width: 80%;
-        @include flexCenter(row);
-        justify-content: space-around;
-        list-style: none;
-        li {
-            padding: 2vw;
-        }
-    }
-}
-h1 {
-    font-size: 1.8rem;
-    color: $primary-color;
-}
-h2 {
-    font-size: 1.7rem;
-    color: $secondary-color;
-}
-.link {
-    text-decoration: none;
-    &:visited, &:active, &:link, &:hover {
-        color: $primary-color;
-    }
-}
-.content-container {
+  background-color: $secondary-color;
+  padding-top: $default-space;
+  font-family: 'DellaRespira';
+  @include flexCenter(column);
+
+  ul {
+    width: 80%;
     @include flexCenter(row);
-}
-.loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.items-container {
-    @include flexCenter(column);
-    align-items: flex-start;
-    margin-top: $default-space*3;
-}
-.item {
-    margin-bottom: $default-space;
-    padding: 15px;
-    width: 100%;
-    color: $primary-color;
-    background-color: $secondary-color;
-    border-radius: 5px 20px 5px 20px;
-    box-shadow: 5px 5px 10px rgb(196, 183, 183);
-    font-family: $primary-font;
-    font-size: 1.5rem;
-}
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-.loader {
-    margin-top: 50%;
-    border: 10px solid $primary-color;
-    box-shadow: 0 0 10px rgb(197, 197, 197);
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    position: relative;
-}
-.loader-inside {
-    width: 64px;
-    height: 64px;
-    border: 4px solid $primary-color;
-    border-top: 4px solid $secondary-color;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -32px 0 0 -32px;
-}
-.chapters-container {
-    @include flexCenter(column);
-    margin-top: $default-space*2;
-    width:100%;
-    &-header {
-        @include flexCenter(column);
-        margin-bottom: $default-space;
-        h2 {
-            margin-bottom: $default-space;
-        }
-    }
-    &-chapters {
-        @include flexCenter(column);
-        justify-content: space-around;
-    }
-    ul {
-        width:100%;
-        list-style-type: decimal;
-    }
+
+    justify-content: space-around;
+    list-style: none;
+
     li {
-        padding: 0 0 5px 10px;
+      padding: 2vw;
     }
-    
+  }
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: $primary-color;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: $secondary-color;
+}
+
+.link {
+  text-decoration: none;
+  &:visited, 
+  &:active, 
+  &:link,
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.content-container {
+  @include flexCenter(row);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.items-container {
+  @include flexCenter(column);
+
+  align-items: flex-start;
+  margin-top: $default-space*3;
+}
+
+.item {
+  margin-bottom: $default-space;
+  padding: 15px;
+  width: 100%;
+  color: $primary-color;
+  background-color: $secondary-color;
+  border-radius: 5px 20px 5px 20px;
+  box-shadow: 5px 5px 10px rgb(196, 183, 183);
+  font-family: $primary-font;
+  font-size: 1.5rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  margin-top: 50%;
+  border: 10px solid $primary-color;
+  box-shadow: 0 0 10px rgb(197, 197, 197);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+.loader-inside {
+  width: 64px;
+  height: 64px;
+  border: 4px solid $primary-color;
+  border-top: 4px solid $secondary-color;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -32px 0 0 -32px;
+}
+
+.chapters-container {
+  @include flexCenter(column);
+
+  margin-top: $default-space*2;
+  width: 100%;
+
+  &-header {
+    @include flexCenter(column);
+
+    margin-bottom: $default-space;
+
+    h2 {
+      margin-bottom: $default-space;
+    }
+  }
+
+  &-chapters {
+    @include flexCenter(column);
+
+    justify-content: space-around;
+  }
+
+  ul {
+    width: 100%;
+    list-style-type: decimal;
+  }
+
+  li {
+    padding: 0 0 5px 10px;
+  }
 }
