@@ -1,29 +1,30 @@
 import React, { useEffect } from 'react';
-import Book from './Book';
-import Loading from './Loading';
+import Loading from '../Loading/Loading';
+import Movie from '../Movie/Movie';
 
-const Books = ({ isLoading, setIsLoading, apiPrefix, getData, dataState }) => {
+const Movies = ({ isLoading, setIsLoading, apiPrefix, getData, dataState }) => {
 
   useEffect(() => {
     setIsLoading(true);
-    getData(apiPrefix, 'book');
+    getData(apiPrefix, 'movie');
   }, []);
 
   if (isLoading) {
     return (
       <Loading />
     );
-  }
-  else {
+  } else {
     return (
       <div className='items-container'>
         {dataState.docs.map((item) => {
           return (
-            <Book key={item._id} id={item._id} name={item.name} />
+            <Movie key={item._id} name={item.name} />
           );
         })}
+        {console.log(dataState)}
       </div>
     );
   }
 };
-export default Books;
+
+export default Movies;

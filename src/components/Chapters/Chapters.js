@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Loading from './Loading';
+import Loading from '../Loading/Loading';
 
 const Chapters = ({ isLoading, setIsLoading, apiPrefix, getData, dataState }) => {
   const { id } = useParams(); //Get id from url.

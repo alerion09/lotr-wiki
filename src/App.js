@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { lotrApiKey } from './config';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Books from './Books';
-import Movies from './Movies';
-import Characters from './Characters';
-import HomePage from './HomePage';
-import Navigation from './Navigation';
-import Chapters from './Chapters';
+import Books from './components/Books/Books';
+import Movies from './components/Movies/Movies';
+import Characters from './components/Characters/Characters';
+import HomePage from './components/HomePage/HomePage';
+import Navigation from './components/Navigation/Navigation';
+import Chapters from './components/Chapters/Chapters';
 
 const apiPrefix = 'https://the-one-api.dev/v2/';
 
