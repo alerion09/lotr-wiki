@@ -16,9 +16,9 @@ const Movies = ({ isLoading, setIsLoading, apiPrefix, getData, dataState }) => {
   } else {
     return (
       <div className='items-container'>
-        {dataState.docs.map((item) => {
+        {dataState && dataState?.docs && dataState?.docs.map((item) => {
           return (
-            <Movie key={item._id} name={item.name} />
+            <Movie key={item._id} name={item.name} id={item.id}/>
           );
         })}
         {console.log(dataState)}

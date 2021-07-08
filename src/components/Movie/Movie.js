@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Movie = ({ name }) => {
+const Movie = ({ name, id }) => {
   return (
-    <div className='item'>
+    <Link to={`/movies/${id}`} className='link item'>
       {name}
-    </div>
+    </Link>
   );
 };
 
